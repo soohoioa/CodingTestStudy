@@ -1,0 +1,5 @@
+String ab = "" + a + b; // 숫자 a, b를 문자열로 이어붙이는 코드
+처음 "" 가 문자열이기 때문에 뒤의 숫자들도 문자열처럼 붙는다.
+
+int num = Integer.parseInt(ab); // 문자열을 정수로 바꾸는 코드
+주의! Integer.parseInt("12a"); // 이건 숫자로 바꿀 수 없어 에러 발생
