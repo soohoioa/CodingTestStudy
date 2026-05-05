@@ -1,0 +1,10 @@
+class Solution {
+    public int solution(int a, int b) {
+        return Math.max(Integer.parseInt(String.valueOf(a)+String.valueOf(b)), 2*a*b);
+    }
+}
+
+String.valueOf(a) // 숫자 → 문자열로 변환
+String.valueOf(a) + String.valueOf(b) // 문자열끼리 이어붙이기
+Integer.parseInt("123") // 문자열 → 정수로 변환 ("123" → 123)
+Math.max(x, y) // 두 값 중 더 큰 값 반환
