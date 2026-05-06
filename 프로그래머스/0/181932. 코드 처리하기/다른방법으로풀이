@@ -1,0 +1,19 @@
+lass Solution {
+    public String solution(String code) {
+        StringBuilder answer = new StringBuilder(); // 결과 문자열 저장용
+        int mode = 0; // 시작
+        for (int i = 0; i < code.length(); i++) { // 문자열 처음부터 끝까지 순회
+            char current = code.charAt(i); // i번째 문자 가져오기
+            if (current == '1') {
+                mode = mode == 0 ? 1 : 0;
+                continue;
+            } // mode 0 → 1 , mode 1 → 0 : 상태 전환
+
+            if (i % 2 == mode) { // mode 0 → 짝수만 , mode 1 → 홀수만
+                answer.append(current); // 조건 만족시 결과에 추가
+            }
+        }
+        return answer.length() == 0 ? "EMPTY" : answer.toString(); // 비어있으면 EMPTY 리턴
+    }
+}
+
